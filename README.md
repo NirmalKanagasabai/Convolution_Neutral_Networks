@@ -49,7 +49,10 @@ Please refer to 'Image_Extraction.ipynb' file
 
 #Creating Tensorflow Docker Image:
 
+```
 docker run -it gcr.io/tensorflow/tensorflow:latest-devel
+```
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -81,25 +84,30 @@ Train_Image
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #Sharing the folders with the VM:
-
+```
 docker run -it -v $HOME/tf_files:/tf_files gcr.io/tensorflow/tensorflow:latest-devel
+```
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #Downloading Inception V3:
 
 Allow us to retrain the Inception V3 classifier with our Tiny Imagenet dataset.
-
+```
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 git pull origin master
 git checkout 6d46c0b370836698a3195a6d73398f15fa44bcb2
+```
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #Building the Code:
-
+```
 bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain
+```
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -111,17 +119,20 @@ bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain
 
 -> Retrained_Labels.txt will contain the list of all the classes that is involved and that we will use to correspond the test images to
 
+```
 bazel-bin/tensorflow/examples/image_retraining/retrain \
 --bottleneck_dir=/tf_files/bottlenecks \
 --model_dir=/tf_files/inception \
 --output_graph=/tf_files/retrained_graph.pb \
 --output_labels=/tf_files/retrained_labels.txt \
 --image_dir /tf_files/Train_Image
+```
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
 #Prediction:
-
+```
 Label_Image.py
-
+```
 --------------------------------------------------------------------------------------------------------------------------------------
