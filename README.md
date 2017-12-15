@@ -22,11 +22,11 @@ https://mcgill-my.sharepoint.com/personal/nirmal_kanagasabai_mail_mcgill_ca/_lay
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Skipping the installation process
+### Skipping the installation process
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Docker Optimization:
+### Docker Optimization:
 
 - To cater to the computational needs of the program, it is mandatory to tweak the parameters as the speed of the processor in the virtual machine is crucial.
 
@@ -41,13 +41,13 @@ The following steps were carried out:
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Image Extraction:
+### Image Extraction:
 
 Please refer to 'Image_Extraction.ipynb' file
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Creating Tensorflow Docker Image:
+### Creating Tensorflow Docker Image:
 
 ```
 docker run -it gcr.io/tensorflow/tensorflow:latest-devel
@@ -56,7 +56,7 @@ docker run -it gcr.io/tensorflow/tensorflow:latest-devel
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Directory Structure Creation:
+### Directory Structure Creation:
 
 It is very important to ensure that the directory structure is obeyed when we are adopting Transfer learning approach.
 
@@ -83,7 +83,7 @@ Train_Image
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Sharing the folders with the VM:
+### Sharing the folders with the VM:
 ```
 docker run -it -v $HOME/tf_files:/tf_files gcr.io/tensorflow/tensorflow:latest-devel
 ```
@@ -91,7 +91,7 @@ docker run -it -v $HOME/tf_files:/tf_files gcr.io/tensorflow/tensorflow:latest-d
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Downloading Inception V3:
+### Downloading Inception V3:
 
 Allow us to retrain the Inception V3 classifier with our Tiny Imagenet dataset.
 ```
@@ -104,14 +104,14 @@ git checkout 6d46c0b370836698a3195a6d73398f15fa44bcb2
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Building the Code:
+### Building the Code:
 ```
 bazel build -c opt --copt=-mavx tensorflow/examples/image_retraining:retrain
 ```
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Running the Tensorflow Retraining process:
+### Running the Tensorflow Retraining process:
 
 -> Bottleneck directory will be used to cache the outputs of the lower layers on disk so that they do not have to repeatedly be recalculated
 
@@ -131,7 +131,7 @@ bazel-bin/tensorflow/examples/image_retraining/retrain \
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-#Prediction:
+### Prediction:
 ```
 Label_Image.py
 ```
