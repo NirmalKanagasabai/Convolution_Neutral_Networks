@@ -1,15 +1,15 @@
 
 ****************************************************************************************************************************************
 
-As the retrained_graph.pb file was 88 MB, due to size restrictions in CMT portal, we have uploaded them here.
-The one drive folder also consists of Bottlenecks that were created during the predictions
+As the retrained_graph.pb file was 88 MB, we have uploaded them in the following URL.
+The One Drive folder also consists of Bottlenecks that were created during the predictions
 
 https://mcgill-my.sharepoint.com/personal/nirmal_kanagasabai_mail_mcgill_ca/_layouts/15/guestaccess.aspx?docid=19b10f61652704239a18eecd259fe3eba&authkey=Ad7ExX0ggXwPQ9hR5vDoyBc
 
 ****************************************************************************************************************************************
 
 
-*To ensure the Convolution Neural Networks program run, the following steps are to be followed:
+To ensure the Convolution Neural Networks program run, the following steps are to be followed:
 
 1) Docker Installation
 2) Tensorflow Installation
