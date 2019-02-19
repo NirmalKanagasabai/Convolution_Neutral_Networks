@@ -34,10 +34,10 @@ To ensure the Convolution Neural Networks program run, the following steps are t
 
 The following steps were carried out:
 
-[1] VirtualBox (ACPI Shutdown)
-[2] Base Memory increased to 75% of Laptop's total Memory
-[3] Processor increased to the maximum applicable
-[4] Headless Start
+- VirtualBox (ACPI Shutdown)
+- Base Memory increased to 75% of Laptop's total Memory
+- Processor increased to the maximum applicable
+- Headless Start
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
